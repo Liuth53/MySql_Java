@@ -31,13 +31,15 @@ public class jdbcUtils_Use {
     public void Test_DML(){
         Connection connection = null;
         PreparedStatement preparedStatement = null;
+        //执行DML语句
         String sql = "insert into admin values(null,?,?)";
             try {
                 connection = JDBCUtils.getConnection();
                 preparedStatement = connection.prepareStatement(sql);
                 preparedStatement.setString(1,"a");
                 preparedStatement.setString(2,"a");
-                preparedStatement.executeUpdate();
+                int rows = preparedStatement.executeUpdate();
+                System.out.println(rows > 0 ? "成功":"失败");
             } catch (SQLException e) {
                 e.printStackTrace();
             }finally {
