@@ -38,9 +38,9 @@ public class JDBC01 {
         //获取连接
         Connection connect = driver.connect(url, properties);
         //执行SQL语句
-//        String sql = "insert into users values(4,'赵六','天津')";
+        String sql = "insert into users values(4,'赵六','天津')";
 //        String sql = "update users set name='安安' where id = 1";
-        String sql = "delete from users where id = 4";
+//        String sql = "delete from users where id = 4";
         //执行静态SQL语句并返回生成结 果的对象
         Statement statement = connect.createStatement();
         //如果是dml语句，则返回影响行数，成功返回1，失败0

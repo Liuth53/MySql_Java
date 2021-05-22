@@ -43,9 +43,10 @@ public class ResultSet_Test {
         ResultSet resultSet = statement.executeQuery(sql);
         //使用while循环取出数据
         while (resultSet.next()){
-            int id = resultSet.getInt(1);//获取第一列数据
+            Object id = resultSet.getObject(1);
+//            int id = resultSet.getInt(1);//获取第一列数据
             String name = resultSet.getString(2);
-            String address = resultSet.getString(3);
+            String address = resultSet.getString("address");
             System.out.println(id+"\t"+name+"\t"+address+"\t");
         }
         //关闭连接
