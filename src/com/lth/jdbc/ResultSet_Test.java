@@ -38,7 +38,7 @@ public class ResultSet_Test {
         Connection connection = DriverManager.getConnection(url, user, password);
         //得到statement
         Statement statement = connection.createStatement();
-        String sql = "select id, name, address from users";
+        String sql = "select id, name, address from Users";
         //执行SQL语句，返回ResultSet对象（表）
         ResultSet resultSet = statement.executeQuery(sql);
         //使用while循环取出数据

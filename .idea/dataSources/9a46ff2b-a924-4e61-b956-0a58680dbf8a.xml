@@ -781,23 +781,42 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <table id="235" parent="2" name="users"/>
     <column id="236" parent="234" name="column_1">
       <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>int(11) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="237" parent="235" name="id">
+    <column id="237" parent="234" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="238" parent="234" name="password">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <key id="239" parent="234" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>column_1</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="240" parent="235" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="238" parent="235" name="name">
+    <column id="241" parent="235" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="239" parent="235" name="address">
+    <column id="242" parent="235" name="address">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <key id="240" parent="235" name="PRIMARY">
+    <column id="243" parent="235" name="account">
+      <Position>4</Position>
+      <DataType>int(11) unsigned zerofill|0s</DataType>
+    </column>
+    <key id="244" parent="235" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

@@ -35,7 +35,7 @@ public class JDBCUtils {
 
         try {
             Properties properties = new Properties();
-            properties.load(new FileInputStream("src\\mysql2.properties"));
+            properties.load(new FileInputStream("src\\mysql.properties"));
             //读取相关的属性值
             user = properties.getProperty("user");
             password = properties.getProperty("password");
