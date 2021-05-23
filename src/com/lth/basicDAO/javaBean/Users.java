@@ -17,7 +17,7 @@
 */
 
 
-package com.lth.jdbcUtils;
+package com.lth.basicDAO.javaBean;
 public class Users {
 
     private Integer id;
